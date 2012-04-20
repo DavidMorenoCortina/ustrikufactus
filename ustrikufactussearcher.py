@@ -101,22 +101,10 @@ def search(index, query):
 
 """ Crawler """
 def get_page(url):
-    """
-    try:
-        a = urllib.request.urlopen(url)
-        if str(a.info()).find('Content-Type: image/') > -1:
-            content = ""
-        else:
-            content = a.read().decode('utf-8')
-    except:
-        content = ""
-    return BeautifulSoup(content)
-    """
     try:
         opener = urllib.request.build_opener()
         opener.addheaders = [('User-agent', 'Mozilla/5.0')]
         a = opener.open(url)
-        #a = urllib.request.urlopen(url)
         if str(a.info()).find('Content-Type: image/') > -1:
             content = ""
         else:
