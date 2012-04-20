@@ -5,7 +5,7 @@ try:
 except ImportError:  
     import pickle
 
-""" Mantenimiento """
+""" Maintenance """
 def deleteLinksGroup(index, needle):
     for elem in index:
         if elem[0].find(needle)==0:
